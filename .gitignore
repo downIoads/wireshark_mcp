@@ -1,0 +1,56 @@
+# --- Python build/runtime ---------------------------------------------------
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+build/
+dist/
+.install.lock/
+
+# --- Local AI / editor state ------------------------------------------------
+.agents/
+.claude/
+.codex/
+CODEX.md
+CLAUDE.md
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# --- OS junk ----------------------------------------------------------------
+.DS_Store
+Thumbs.db
+
+# --- Captures, logs, scratch (NEVER push) -----------------------------------
+# The default capture sandbox lives in ~/.wireshark-mcp/captures/ which is
+# already outside the repo. These are defensive: never commit a pcap, key,
+# log, or mitm flow file even if it lands inside the working tree.
+.captures/
+*.pcap
+*.pcapng
+*.cap
+*.pcap.gz
+*.pcapng.gz
+*.log
+*.flows
+*.bak
+*.tmp
+
+# --- TLS / secrets ----------------------------------------------------------
+# Anything that could decrypt traffic or authenticate as us.
+*.pem
+*.key
+*.crt
+*.cer
+*.pfx
+*.p12
+*.keylog
+sslkeylog*
+mitmproxy-ca-*
+.env
+.env.*
+secrets.json
+credentials.json

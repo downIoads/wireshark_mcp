@@ -1,0 +1,19 @@
+[project]
+name = "wireshark-mcp"
+version = "0.1.0"
+description = "MCP server exposing Wireshark CLI tools (tshark/dumpcap/editcap/capinfos) to LLMs"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp>=1.2.0",
+    "mitmproxy>=10",
+]
+
+[project.scripts]
+wireshark-mcp = "wireshark_mcp.server:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["wireshark_mcp*"]
